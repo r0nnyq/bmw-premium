@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Premium Selection | Официальный дилер</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.bmw.com/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg"
+                    alt="BMW Logo">
+                <div class="logo-text">BMW <span>Premium</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#models">Модели</a></li>
+                    <li><a href="#features">Преимущества</a></li>
+                    <li><a href="#test-drive">Тест-драйв</a></li>
+                    <li><a href="#dealers">Дилеры</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Официальный дилер BMW</h1>
+            <p>Эксклюзивные модели, премиальное обслуживание и лучшие условия покупки. Ощутите настоящее удовольствие от
+                вождения.</p>
+            <a href="#models" class="btn">Выбрать модель</a>
+            <a href="#test-drive" class="btn btn-secondary">Запись на тест-драйв</a>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="models" class="section">
+        <div class="section-title">
+            <h2>Наши модели</h2>
+            <p>Выберите свой идеальный BMW</p>
+        </div>
+        <div class="models-filter">
+            <button class="filter-btn active" data-filter="all">Все модели</button>
+            <button class="filter-btn" data-filter="sedan">Седаны</button>
+            <button class="filter-btn" data-filter="suv">Внедорожники</button>
+            <button class="filter-btn" data-filter="coupe">Купе</button>
+            <button class="filter-btn" data-filter="electric">Электромобили</button>
+        </div>
+        <div class="models-grid">
+            
+        </div>
+    </section>
+
+    <section id="features" class="section features">
+        <div class="section-title">
+            <h2>Наши преимущества</h2>
+            <p>Почему стоит выбрать именно нас</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Гарантия качества</h3>
+                <p>Официальная гарантия BMW на все автомобили и полная проверка перед продажей.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-euro-sign"></i>
+                </div>
+                <h3>Лучшие цены</h3>
+                <p>Специальные условия финансирования и программы лояльности для наших клиентов.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Сервис</h3>
+                <p>Квалифицированное обслуживание с использованием оригинальных запчастей BMW.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="test-drive" class="section test-drive">
+        <div class="section-title">
+            <h2>Запись на тест-драйв</h2>
+            <p>Ощутите мощь и комфорт BMW лично</p>
+        </div>
+        <form class="test-drive-form">
+            <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" class="form-control" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+7 (999) 123-45-67" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="model">Модель автомобиля</label>
+                <select id="model" class="form-control" required>
+                    <option value="" disabled selected>Выберите модель</option>
+                    <option value="3-series">BMW 3 Series</option>
+                    <option value="5-series">BMW 5 Series</option>
+                    <option value="7-series">BMW 7 Series</option>
+                    <option value="x3">BMW X3</option>
+                    <option value="x5">BMW X5</option>
+                    <option value="x7">BMW X7</option>
+                    <option value="i4">BMW i4</option>
+                    <option value="i7">BMW i7</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Желаемая дата</label>
+                <input type="date" id="date" class="form-control" required>
+            </div>
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+    </section>
+
+    <section id="dealers" class="section">
+        <div class="section-title">
+            <h2>Наши дилерские центры</h2>
+            <p>Посетите один из наших официальных салонов</p>
+        </div>
+        <div class="dealers-map" id="map"></div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>О компании</h3>
+                <p>Официальный дилер BMW в России. Мы предлагаем новые и подержанные автомобили премиум-класса с
+                    гарантией качества.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, Ленинградский пр-т, 39А</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@bmw-premium.ru</li>
+                    <li><i class="fas fa-clock"></i> Пн-Пт: 9:00 - 21:00, Сб-Вс: 10:00 - 20:00</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Быстрые ссылки</h3>
+                <ul class="footer-links">
+                    <li><a href="#models">Каталог автомобилей</a></li>
+                    <li><a href="#test-drive">Запись на тест-драйв</a></li>
+                    <li><a href="#">Спецпредложения</a></li>
+                    <li><a href="#">Финансовые услуги</a></li>
+                    <li><a href="#">Сервис и запчасти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 BMW Premium Selection. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        function loadMap() {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789135803!2d37.61531031593095!3d55.75582668055313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a45a44e9d07%3A0x8b7f8a5b2d4e3b1f!2z0JvQtdC90LjQvdCz0YDQsNC00YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDM5LCDQnNC-0YHQutCy0LA!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru';
+            iframe.width = '100%';
+            iframe.height = '500';
+            iframe.style.border = '0';
+            iframe.loading = 'lazy';
+            document.getElementById('map').appendChild(iframe);
+        }
+        window.addEventListener('DOMContentLoaded', loadMap);
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
